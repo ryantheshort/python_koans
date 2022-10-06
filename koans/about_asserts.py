@@ -14,7 +14,12 @@ class AboutAsserts(Koan):
         #
         #   http://bit.ly/about_asserts
 
-        self.assertTrue(False) # This should be True
+        # self.assertTrue(False) # This should be True
+        # https://docs.python.org/3/library/unittest.html for more info
+        # assertTrue(expr, msg=None) tests that expr is true
+        # assertFalse(expr msg=None) tests that expr is false
+        # self.assertTrue
+        self.assertTrue(True)
 
     def test_assert_with_message(self):
         """
@@ -32,7 +37,8 @@ class AboutAsserts(Koan):
         """
         To understand reality, we must compare our expectations against reality.
         """
-        expected_value = __
+        # expected_value = __
+        expected_value = 2
         actual_value = 1 + 1
         self.assertTrue(expected_value == actual_value)
 
@@ -40,7 +46,8 @@ class AboutAsserts(Koan):
         """
         Some ways of asserting equality are better than others.
         """
-        expected_value = __
+        # expected_value = __
+        expected_value = 2
         actual_value = 1 + 1
 
         self.assertEqual(expected_value, actual_value)
@@ -51,7 +58,9 @@ class AboutAsserts(Koan):
         """
 
         # This throws an AssertionError exception
-        assert False
+        # assert False
+        # Assert statements are a convenient way to insert debugging assertions into a program:
+        assert True
 
     def test_that_sometimes_we_need_to_know_the_class_type(self):
         """
