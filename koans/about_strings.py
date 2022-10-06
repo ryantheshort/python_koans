@@ -6,24 +6,33 @@ from runner.koan import *
 class AboutStrings(Koan):
 
     def test_double_quoted_strings_are_strings(self):
+        # double quotes strings are strings
+        # https://docs.python.org/3/library/functions.html#isinstance
         string = "Hello, world."
-        self.assertEqual(__, isinstance(string, str))
+        #isinstaance(object, classinfo)
+        # Return True if the object argument is an instance of the classinfo argument
+        # self.assertEqual(__, isinstance(string, str))
+        self.assertEqual(True, isinstance(string, str))
 
     def test_single_quoted_strings_are_also_strings(self):
         string = 'Goodbye, world.'
-        self.assertEqual(__, isinstance(string, str))
+        # self.assertEqual(__, isinstance(string, str))
+        self.assertEqual(True, isinstance(string, str))
 
     def test_triple_quote_strings_are_also_strings(self):
         string = """Howdy, world!"""
-        self.assertEqual(__, isinstance(string, str))
+        # self.assertEqual(__, isinstance(string, str))
+        self.assertEqual(True, isinstance(string, str))
 
     def test_triple_single_quotes_work_too(self):
         string = '''Bonjour tout le monde!'''
-        self.assertEqual(__, isinstance(string, str))
+        # self.assertEqual(__, isinstance(string, str))
+        self.assertEqual(True, isinstance(string, str))
 
     def test_raw_strings_are_also_strings(self):
         string = r"Konnichi wa, world!"
-        self.assertEqual(__, isinstance(string, str))
+        # self.assertEqual(__, isinstance(string, str))
+        self.assertEqual(True, isinstance(string, str))
 
     def test_use_single_quotes_to_create_string_with_double_quotes(self):
         string = 'He said, "Go Away."'
