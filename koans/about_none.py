@@ -11,11 +11,15 @@ class AboutNone(Koan):
 
     def test_none_is_an_object(self):
         "Unlike NULL in a lot of languages"
-        self.assertEqual(__, isinstance(None, object))
-
+        # https://docs.python.org/3/c-api/none.html
+        # none is an object that has no values
+        # self.assertEqual(__, isinstance(None, object))
+        self.assertEqual(True, isinstance(None, object))
     def test_none_is_universal(self):
         "There is only one None"
-        self.assertEqual(____, None is None)
+        # https://www.pythontutorial.net/advanced-python/python-none/#:~:text=The%20None%20is%20a%20singleton,one%20None%20object%20at%20runtime.&text=It's%20a%20good%20practice%20to,compare%20a%20value%20with%20None%20
+        # The None is a singleton object of the NoneType class. It means that Python creates one and only one None object at runtime.
+        # self.assertEqual(____, None is None)
 
     def test_what_exception_do_you_get_when_calling_nonexistent_methods(self):
         """
@@ -30,7 +34,6 @@ class AboutNone(Koan):
             None.some_method_none_does_not_know_about()
         except Exception as ex:
             ex2 = ex
-
         # What exception has been caught?
         #
         # Need a recap on how to evaluate __class__ attributes?
