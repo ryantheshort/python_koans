@@ -25,13 +25,15 @@ class AboutAsserts(Koan):
         """
         Enlightenment may be more easily achieved with appropriate messages.
         """
-        self.assertTrue(False, "This should be True -- Please fix this")
+        # self.assertTrue(False, "This should be True -- Please fix this")
+        self.assertTrue(True, "This should be True -- Please fix this")
 
     def test_fill_in_values(self):
         """
         Sometimes we will ask you to fill in the values
         """
-        self.assertEqual(__, 1 + 1)
+        # self.assertEqual(__, 1 + 1)
+        self.assertEqual(2, 1 + 1)
 
     def test_assert_equality(self):
         """
@@ -79,7 +81,8 @@ class AboutAsserts(Koan):
         #
         # See for yourself:
 
-        self.assertEqual(__, "navel".__class__) # It's str, not <type 'str'>
+        # self.assertEqual(__, "navel".__class__) # It's str, not <type 'str'>
+        self.assertEqual(str, "navel".__class__) # It's str, not <type 'str'>
 
         # Need an illustration? More reading can be found here:
         #
